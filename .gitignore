@@ -133,5 +133,3 @@ typings/
 /out-tsc
 /.scannerwork
 
-# Always commit developer assets, even if it has an ignored file
-!/developer-assets/**/*
