@@ -1,0 +1,40 @@
+{
+  "name": "@iangregsondev/distributed-exchange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --ignore-path \".prettierignore\" --write  \"src/**/*.js\"",
+    "lint": "eslint --ignore-path .eslintignore src/**",
+    "start": "nodemon --exec babel-node src/server.js",
+    "boot:grapes": "concurrently \"./grape-server1.sh\" \"./grape-server2.sh\"",
+    "build": "rimraf dist && babel src --out-dir dist",
+    "serve": "node dist/server.js",
+    "test": "jest --config jest.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.11.0",
+    "@babel/node": "7.10.5",
+    "@babel/preset-env": "7.11.0",
+    "@types/jest": "26.0.8",
+    "eslint": "7.5.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-jest": "23.20.0",
+    "jest": "26.2.2",
+    "nodemon": "2.0.4",
+    "prettier": "2.0.5",
+    "rimraf": "3.0.2"
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "7.11.0",
+    "concurrently": "5.2.0",
+    "faker": "4.1.0",
+    "grenache-nodejs-http": "0.7.8",
+    "grenache-nodejs-link": "0.7.12",
+    "log4js": "6.3.0"
+  }
+}

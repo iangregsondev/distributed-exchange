@@ -1,0 +1,7 @@
+version: "2.4"
+services:
+  client1:
+    build: .
+    environment:
+      PORT: xxxxx
+
